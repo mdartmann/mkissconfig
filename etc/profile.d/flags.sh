@@ -7,7 +7,7 @@ export CC=gcc
 export CXX=g++
 export LD=ld.bfd
 
-export CFLAGS='-march=x86_64-v3 -mtune=generic -O3 -pipe -fno-plt -fexceptions -Wp,-D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fstack-clash-protection -fcf-protection'
+export CFLAGS='-march=x86-64-v3 -mtune=generic -O3 -pipe -fno-plt -fexceptions -Wp,-D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fstack-clash-protection -fcf-protection'
 export CXXFLAGS="$CFLAGS -Wp,-D_GLIBCXX_ASSERTIONS"
 export LDFLAGS='-Wl,-O1,--sort-common,--as-needed,-z,relro,-z,now'
 export RUSTFLAGS="-C opt-level=2"
