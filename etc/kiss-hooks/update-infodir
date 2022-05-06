@@ -12,6 +12,7 @@ if [ $1 = "post-install" ]; then
   installdir="$2"
 
   if grep "/usr/share/info" $installdir/manifest > /dev/null 2>&1; then
+    echo "Updating infodir..."
     find /usr/share/info -type f | while read -r file; do
       case $file in 
         */dir|*/dir.gz|*/dir.old|*/dir.old.gz|*-[0-9]|*-[0-9].gz|*-[1-9][0-9]|*-[1-9][0-9].gz|*.png)
