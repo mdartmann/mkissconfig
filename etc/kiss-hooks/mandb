@@ -1,0 +1,13 @@
+#!/bin/sh
+# vim:set ts=2 sw=2 et:
+
+if [ $1 = "post-install" ]; then
+  shift
+  pkgname="$1"
+  installdir="$2"
+
+  if grep "/usr/share/man" $installdir/manifest > /dev/null 2>&1; then
+    echo "Updating mandb..."
+    mandb --quiet
+  fi
+fi
