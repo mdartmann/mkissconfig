@@ -8,6 +8,6 @@ if [ $1 = "post-install" ]; then
 
   if grep "/usr/share/glib-2.0/schemas" $installdir/manifest > /dev/null 2>&1; then
     echo "Compiling GLib schemas..."
-    glib-compile-schemas /usr/share/glib-2.0/schemas
+    glib-compile-schemas /usr/share/glib-2.0/schemas >/dev/null 2>&1
   fi
 fi
