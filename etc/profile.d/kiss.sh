@@ -6,6 +6,9 @@ export KISS_PATH=/var/db/kiss/repo/core:/var/db/kiss/repo/extra:/var/db/kiss/rep
 export KISS_SU="sudo"
 
 export KISS_HOOK=""
-for i in /etc/kiss-hooks/*; do
-    export KISS_HOOK="$KISS_HOOK:$i"
-done
+
+if [ -d /etc/kiss-hooks ]; then
+    for i in /etc/kiss-hooks/*; do
+        export KISS_HOOK="$KISS_HOOK:$i"
+    done
+fi
