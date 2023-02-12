@@ -2,7 +2,7 @@
 
 export KISS_GET=curl
 export KISS_COMPRESS=zst
-export KISS_PATH=/var/db/kiss/repo/core:/var/db/kiss/repo/extra:/var/db/kiss/repo/gui:/var/db/kiss/repo/gnome:/var/db/kiss/repo/multilib
+export KISS_PATH=/var/db/kiss/repo/core:/var/db/kiss/repo/extra:/var/db/kiss/repo/gui:/var/db/kiss/repo/gnome
 export KISS_SU="sudo"
 
 export KISS_HOOK=""
